@@ -1,183 +1,30 @@
-# 🔬 Resonance Peak Detection with Bayesian Uncertainty Quantification
+# Resonance Peak Detection with Bayesian Uncertainty Quantification
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
-[![Machine Learning](https://img.shields.io/badge/ML-Bayesian%20Neural%20Networks-orange)](https://github.com/ahmedbilal9)
-[![Physics](https://img.shields.io/badge/Physics-High%20Energy-green)](https://github.com/ahmedbilal9)
+## Introduction
+In this project, we explore the intricate world of particle physics with a focus on the measurement of the Z boson mass. Utilizing advanced techniques such as Bayesian neural networks and Monte Carlo Dropout, we aim to quantify the uncertainties inherent in such high-energy physics experiments. This project also emphasizes the analysis of data from CERN, providing insights into various particle interactions and decay processes.
 
-## 📌 Project Overview
+## Technical Overview
 
-This project implements advanced **anomaly detection and resonance peak identification** techniques on **CERN dielectron collision event data**. Using Bayesian Neural Networks with Monte Carlo Dropout, the system identifies particle resonances (Z boson, J/ψ) while quantifying prediction uncertainty—a critical requirement in high-energy physics analysis.
+### Particle Physics
+Particle physics is the branch of physics that studies the nature of particles that constitute matter and radiation. It seeks to understand the fundamental constituents of matter and the forces acting between them.
 
-**Research conducted at:** National Centre for Physics (NCP), Pakistan
+### Z Boson Mass Measurement
+The Z boson is an essential particle mediating the weak nuclear force, and precise measurement of its mass is critical for testing the Standard Model of particle physics. In this study, we utilize data analysis techniques and statistical methods to arrive at an accurate mass estimation.
 
----
+### Bayesian Neural Networks
+Bayesian neural networks incorporate Bayesian inference into neural network training, allowing the model to provide uncertainty estimates along with predictions. This aspect is particularly useful in areas where uncertainty quantification is crucial.
 
-## 🎯 Key Features
+### Monte Carlo Dropout
+Monte Carlo Dropout is a technique used in neural networks to estimate uncertainty by making multiple predictions with dropout applied during inference. This method generates a distribution of predictions, allowing for an assessment of the model's confidence in its outputs.
 
-- **Multi-Algorithm Anomaly Detection Pipeline** on 100,000+ CERN collision events
-- **Bayesian Neural Networks** with Monte Carlo Dropout for uncertainty quantification
-- **Z Boson Mass Measurement**: 91.20 ± 0.08 GeV (R² = 0.94)
-- **Automated Resonance Identification** for Z boson and J/ψ particles
-- **Bootstrap Uncertainty Analysis** and conservation law validation
-- **Sideband Subtraction** techniques for background estimation
+### Uncertainty Quantification
+Uncertainty quantification involves the systematic study of uncertainties in computational and real-world systems. In this project, we apply various methods to quantify uncertainties in our Z boson mass measurements and the underlying assumptions of our models.
 
----
+### CERN Data Analysis
+CERN is home to some of the world's most complex particle physics experiments. Our project analyzes data from these experiments to extract meaningful insights and corroborate theoretical predictions.
 
-## 🧪 Methodology
+## Conclusion
+The integration of Bayesian methods and Monte Carlo techniques has the potential to enhance the measurement precision in particle physics. This project not only contributes to the scientific community but also sets the stage for future research in uncertainty quantification methodologies.
 
-### 1. Data Processing
-- Processed **100K CERN dielectron collision events**
-- Feature engineering on invariant mass distributions
-- Background/signal separation techniques
-
-### 2. Bayesian Uncertainty Quantification
-- Implemented **Monte Carlo Dropout** during inference
-- Generated prediction distributions instead of point estimates
-- Quantified **epistemic uncertainty** in mass measurements
-
-### 3. Peak Detection Algorithms
-- Multi-scale resonance identification
-- Statistical significance testing
-- Conservation law consistency checks
-
-### 4. Model Evaluation
-- **R² Score**: 0.94
-- **Bootstrap Analysis**: 1000 iterations for uncertainty bounds
-- **Sideband Subtraction**: Background contamination assessment
-
----
-
-## 📊 Results
-
-| Particle Resonance | Measured Mass (GeV) | Literature Value (GeV) | Uncertainty (GeV) |
-|--------------------|---------------------|------------------------|-------------------|
-| **Z Boson**        | 91.20              | 91.19                 | ± 0.08           |
-| **J/ψ Meson**      | Detected           | 3.10                  | TBD              |
-
-### Model Performance
-- **R² Score**: 0.94
-- **Prediction Accuracy**: High correlation with theoretical values
-- **Uncertainty Quantification**: Robust via MC Dropout
-
----
-
-## 🛠️ Technologies & Tools
-
-**Programming & Libraries:**
-- Python 3.8+
-- TensorFlow / PyTorch (Bayesian Neural Networks)
-- NumPy, Pandas (Data manipulation)
-- SciPy (Statistical analysis)
-- Matplotlib, Seaborn (Visualization)
-
-**Scientific Computing:**
-- ROOT (CERN data analysis framework)
-- Bayesian inference techniques
-- Monte Carlo methods
-
-**Physics Concepts:**
-- High-energy particle physics
-- Invariant mass reconstruction
-- Resonance peak detection
-
----
-
-## 🚀 Installation & Usage
-
-### Prerequisites
-```bash
-pip install numpy pandas scipy matplotlib seaborn tensorflow scikit-learn
-```
-
-### Running the Analysis
-```python
-# Load CERN collision data
-from src.data_loader import load_dielectron_data
-data = load_dielectron_data('path/to/cern_data.root')
-
-# Initialize Bayesian model
-from src.bayesian_model import BayesianResonanceDetector
-model = BayesianResonanceDetector(mc_samples=100)
-
-# Train with uncertainty quantification
-model.fit(X_train, y_train)
-
-# Predict with uncertainty bounds
-predictions, uncertainties = model.predict_with_uncertainty(X_test)
-```
-
----
-
-## 📈 Visualizations
-
-The project includes:
-- **Invariant mass distributions** with fitted resonance peaks
-- **Uncertainty heatmaps** showing prediction confidence regions
-- **Sideband subtraction plots** for background estimation
-- **Bootstrap distribution plots** for statistical validation
-
----
-
-## 🔬 Scientific Impact
-
-This work demonstrates:
-1. **High-precision particle mass measurements** using ML techniques
-2. **Robust uncertainty quantification** critical for physics discoveries
-3. **Automated resonance detection** reducing manual analysis time
-4. **Validation techniques** ensuring physical consistency
-
----
-
-## 🎓 Research Context
-
-- **Institution**: National Centre for Physics (NCP)
-- **Domain**: High-Energy Physics, Machine Learning
-- **Data Source**: CERN Open Data Portal (dielectron collision events)
-- **Duration**: December 2025 - Present
-
----
-
-## 📚 References
-
-1. CERN Open Data Portal: http://opendata.cern.ch
-2. Particle Data Group - Z Boson Properties
-3. "Bayesian Neural Networks for Particle Physics" (arXiv)
-4. Monte Carlo Dropout: "Dropout as a Bayesian Approximation" (Gal & Ghahramani, 2016)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Areas for improvement:
-- Additional resonance particle detection (Upsilon, Higgs)
-- Deep learning architectures (Variational Autoencoders)
-- Real-time event processing pipelines
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👤 Author
-
-**Ahmed Bilal**  
-Electrical Engineering Student | AI/ML Researcher | CERN Contributor
-
-- 🌐 [GitHub](https://github.com/ahmedbilal9)
-- 💼 [LinkedIn](https://linkedin.com/in/ahmedbilal9)
-- ✉️ ahmedbilalned@gmail.com
-
----
-
-## 🙏 Acknowledgments
-
-- National Centre for Physics (NCP) for research support
-- CERN for open-access collision data
-- Physics supervisors and mentors
-
----
-
-*"Advancing particle physics through the intersection of Bayesian statistics, deep learning, and high-energy collision data analysis."*
+## Acknowledgements
+We would like to thank the CERN collaboration for providing access to the data and resources necessary for this research. Their efforts in advancing particle physics have inspired countless researchers.
